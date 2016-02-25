@@ -14,7 +14,7 @@ router.route('/toDo')
 
 		toDo.save(function(err, toDo){
 			if(err){
-				console.log(err);
+				res.status(400).json(err);
 			} else {
 				res.json(toDo);
 			}
@@ -25,8 +25,9 @@ router.route('/toDo')
 	ToDo.find(function(err, toDo){
 		if(err){
 			console.log(err);
+			res.status(400).end();
 		} else {
-			res.json(toDo)
+			res.json(toDo);
 		}
 	})
 });

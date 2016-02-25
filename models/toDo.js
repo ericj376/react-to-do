@@ -6,17 +6,13 @@ var ToDoSchema = new Schema({
 		type : String,
 	 	required: true,	
 	},
-	id: {
-		type: Number,
-		required: true,
-	},
 	dueDate: {
 		type: String,
 		required: true,
 	},
 	description: {
 		type: String,
-		required: true,
+		required: true
 	}
 });
 
